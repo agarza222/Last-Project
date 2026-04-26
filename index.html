@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoWeather | Rider Safety Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MotoWeather</h1>
+        <p class="subtitle">Real-time safety stats for your ride</p>
+        <div class="input-group">
+            <input type="text" id="city-input" placeholder="Enter City (e.g. Kenedy)">
+            <input type="number" id="speed-input" placeholder="Riding Speed (mph)">
+            <div class="gear-toggle">
+                <label>Wearing Full Safety Gear? <input type="checkbox" id="full-gear-checkbox" checked></label>
+            </div>
+            <button id="get-weather-btn">Check Conditions</button>
+        </div>
+        <div id="weather-display" style="margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <h2 id="current-temp" style="font-size: 3.5rem; margin: 10px 0; color: rgba(255,255,255,0.2);">--°F</h2>
+            <p id="description" style="text-transform: capitalize; color: #555; margin-bottom: 20px;">Waiting For Input...</p>
+            <div class="stats">
+                <p style="color: #777;">Ambient Wind: <span id="wind-speed" style="color: #fff;">0</span> mph</p>
+                <p class="highlight" style="font-size: 1.4rem; color: #00d2ff; font-weight: bold; margin: 15px 0;">
+                    <span id="factor-label" style="opacity: 0.6;">Rider Feel</span>: <span id="feels-like" style="opacity: 0.3;">--</span>°F
+                </p>
+            </div>
+            <div id="gear-recommendation" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; margin-top: 20px; border: 1px dashed rgba(255,255,255,0.1);">
+                <h3 style="margin-top: 0; font-size: 1rem; color: #00d2ff; text-transform: uppercase;">Safety Analysis</h3>
+                <p id="gear-text" style="font-size: 0.95rem; color: #eee;">Enter details above to see recommendations.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
